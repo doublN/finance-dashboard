@@ -29,11 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <div className="flex">
-          <div className="flex-1/6">
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <div className="flex h-full">
+          <div className="flex-1/6 border-r-2 border-r-gray-200">
             <LeftMenu />
           </div>
           <div className="flex-5/6">{children}</div>

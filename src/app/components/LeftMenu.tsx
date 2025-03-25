@@ -3,7 +3,7 @@ import { Logo } from "../icons/Logo";
 const LeftMenu = () => {
   return (
     <div>
-      <div>
+      <div className="p-5 border-b-2 border-gray-200">
         <Logo name="paypal" size="small" />
       </div>
       <div>TOP MENU</div>
