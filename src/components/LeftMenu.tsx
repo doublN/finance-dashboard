@@ -8,7 +8,7 @@ const LeftMenu = () => {
         <Logo name="paypal" size="small" />
       </div>
       <div className="flex flex-1 flex-col justify-between">
-        <div className="flex flex-col gap-2 mt-2">
+        <nav className="flex flex-col gap-2 mt-2">
           <LeftMenuButton
             name="Dashboard"
             icon="home"
@@ -40,8 +40,8 @@ const LeftMenu = () => {
             link=""
             selected={false}
           />
-        </div>
-        <div className="">
+        </nav>
+        <nav className="">
           <LeftMenuButton
             name="Notifications"
             icon="notifications"
@@ -60,7 +60,7 @@ const LeftMenu = () => {
             link=""
             selected={false}
           />
-        </div>
+        </nav>
       </div>
     </div>
   );
