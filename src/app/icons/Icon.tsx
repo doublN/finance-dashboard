@@ -8,6 +8,7 @@ import { Send } from "./svg/send";
 import { Settings } from "./svg/settings";
 import { Toll } from "./svg/toll";
 import { Wallet } from "./svg/wallet";
+import { Search } from "./svg/search";
 
 export type IconName =
   | "help"
@@ -18,7 +19,8 @@ export type IconName =
   | "send"
   | "settings"
   | "toll"
-  | "wallet";
+  | "wallet"
+  | "search";
 
 export type IconSize = "small" | "medium" | "large";
 
@@ -37,6 +39,7 @@ const icons = new Map<IconName, FunctionComponent>([
   ["settings", Settings],
   ["toll", Toll],
   ["wallet", Wallet],
+  ["search", Search],
 ]);
 
 export function Icon(props: Props) {
