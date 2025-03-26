@@ -5,7 +5,7 @@ import Link from "next/link";
 
 type Props = {
   readonly name: string;
-  readonly icon: IconName; //TO CHANGE
+  readonly icon: IconName;
   readonly link: string;
   readonly selected: boolean;
 };
@@ -26,6 +26,7 @@ export function LeftMenuButton(props: Props) {
       <Link
         className={`flex items-center w-full p-2 pl-2 hover:cursor-pointer ${buttonSelectedStyle}`}
         href={props.link}
+        aria-label={`${props.name} button`}
       >
         <Icon name={props.icon} size="small" />
         <span className="pl-2 text-sm">{props.name}</span>
