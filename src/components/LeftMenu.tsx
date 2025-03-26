@@ -1,6 +1,7 @@
 import { Logo } from "../app/icons/Logo";
 import { LeftMenuButton } from "./LeftMenuButton";
 import { LeftMenuSearch } from "./LeftMenuSearch";
+import { UserCard } from "./UserCard";
 
 const LeftMenu = () => {
   return (
@@ -71,6 +72,9 @@ const LeftMenu = () => {
               selected={false}
             />
           </nav>
+          <div className="m-4">
+            <UserCard />
+          </div>
         </div>
       </div>
     </div>
