@@ -1,4 +1,7 @@
+"use client";
+
 import { Icon, IconName } from "@/app/icons/Icon";
+import Link from "next/link";
 
 type Props = {
   readonly name: string;
@@ -9,7 +12,7 @@ type Props = {
 
 export function LeftMenuButton(props: Props) {
   let spanSelectedStyle = "";
-  let buttonSelectedStyle = "text-gray-500";
+  let buttonSelectedStyle = "text-gray-500 hover:bg-gray-200";
 
   if (props.selected) {
     spanSelectedStyle = "bg-blue-900 rounded-lg rounded-2 h-8 ";
@@ -20,12 +23,13 @@ export function LeftMenuButton(props: Props) {
   return (
     <div className={`flex items-center pr-4`}>
       <span className={`w-1 mx-2 relative ${spanSelectedStyle}`}></span>
-      <button
+      <Link
         className={`flex items-center w-full p-2 pl-2 hover:cursor-pointer ${buttonSelectedStyle}`}
+        href={props.link}
       >
         <Icon name={props.icon} size="small" />
         <span className="pl-2 text-sm">{props.name}</span>
-      </button>
+      </Link>
     </div>
   );
 }
