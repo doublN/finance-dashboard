@@ -12,12 +12,12 @@ type Props = {
 
 export function LeftMenuButton(props: Props) {
   let spanSelectedStyle = "";
-  let buttonSelectedStyle = "text-gray-500 hover:bg-gray-200";
+  let buttonSelectedStyle = "text-gray-500 hover:bg-gray-200 hover:rounded-lg";
 
   if (props.selected) {
-    spanSelectedStyle = "bg-blue-900 rounded-lg rounded-2 h-8 ";
+    spanSelectedStyle = "bg-blue-900 rounded-lg h-8 ";
     buttonSelectedStyle =
-      "border-2 rounded-md border-gray-200 bg-white text-blue-900";
+      "border-2 rounded-md border-gray-200 bg-white text-blue-900 font-semibold";
   }
 
   return (
