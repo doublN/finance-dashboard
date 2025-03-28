@@ -1,3 +1,4 @@
+import { FearAndGreedCard } from "@/components/FearAndGreedCard";
 import { FinanceTracker } from "@/components/FinanceTracker";
 import { PortfolioStatsCard } from "@/components/PortfolioStatsCard";
 
@@ -10,9 +11,7 @@ export default function Home() {
           My Portfolio
         </div>
         <PortfolioStatsCard />
-        <div className=" col-span-2 row-span-1 border-2 border-gray-200 rounded-xl bg-white">
-          Fear and Greed
-        </div>
+        <FearAndGreedCard />
       </div>
       <div className="grow border-2 border-gray-200 rounded-xl bg-white">
         Crypto Market
