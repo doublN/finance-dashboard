@@ -23,7 +23,7 @@ export function Search(props: Props) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label className={`${!props.showLabel && "hidden"}`} htmlFor="search">
+      <label className={`${!props.showLabel && "sr-only"}`} htmlFor="search">
         {props.label}
       </label>
       <div className="relative flex items-center">
