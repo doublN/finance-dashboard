@@ -3,11 +3,31 @@
 :root {
   --background: #f5f7f9;
   --foreground: #171717;
+  --paypal: #0271f2;
+  --paypal-light: #e5f1fe;
+  --bitcoin: #f6931c;
+  --bitcoin-light: #fef4e8;
+  --etherium: #4a2ce6;
+  --etherium-light: #eeebfd;
+  --tether: #1aa179;
+  --tether-light: #e8f6f2;
+  --dogecoin: #ba9f33;
+  --dogecoin-light: #fffbe8;
 }
 
-@theme inline {
+@theme static {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-paypal: var(--paypal);
+  --color-paypal-light: var(--paypal-light);
+  --color-bitcoin: var(--bitcoin);
+  --color-bitcoin-light: var(--bitcoin-light);
+  --color-etherium: var(--etherium);
+  --color-etherium-light: var(--etherium-light);
+  --color-tether: var(--tether);
+  --color-tether-light: var(--tether-light);
+  --color-dogecoin: var(--dogecoin);
+  --color-dogecoin-light: var(--dogecoin-light);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
