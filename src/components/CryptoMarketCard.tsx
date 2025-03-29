@@ -12,7 +12,7 @@ export function CryptoMarketCard() {
 
   return (
     <Card>
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between mb-6">
         <h3 className="text-xl font-semibold">Crypto Market</h3>
         <div className="flex gap-2">
           <Search
