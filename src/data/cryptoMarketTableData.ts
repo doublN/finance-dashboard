@@ -2,6 +2,7 @@ import { CryptoTableRow } from "@/components/CryptoTable";
 
 export const cryptoMarketTableData: Array<CryptoTableRow> = [
   {
+    favourite: true,
     currency: {
       name: "bitcoin",
       label: "Bitcoin",
@@ -17,6 +18,7 @@ export const cryptoMarketTableData: Array<CryptoTableRow> = [
     },
   },
   {
+    favourite: false,
     currency: {
       name: "paypal",
       label: "Paypal USD",
@@ -32,6 +34,7 @@ export const cryptoMarketTableData: Array<CryptoTableRow> = [
     },
   },
   {
+    favourite: false,
     currency: {
       name: "etherium",
       label: "Etherium",
@@ -47,6 +50,7 @@ export const cryptoMarketTableData: Array<CryptoTableRow> = [
     },
   },
   {
+    favourite: false,
     currency: {
       name: "dogecoin",
       label: "Dogecoin",
@@ -62,6 +66,7 @@ export const cryptoMarketTableData: Array<CryptoTableRow> = [
     },
   },
   {
+    favourite: false,
     currency: {
       name: "tether",
       label: "Tether",
