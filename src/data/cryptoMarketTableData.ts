@@ -1,6 +1,6 @@
-import { CryptoTableRow } from "@/components/CryptoTable";
+import { CryptoTableRowType } from "@/components/CryptoTableRow";
 
-export const cryptoMarketTableData: Array<CryptoTableRow> = [
+export const cryptoMarketTableData: Array<CryptoTableRowType> = [
   {
     favourite: true,
     currency: {
