@@ -1,4 +1,4 @@
-import { CryptoName } from "@/app/types/crypto";
+import { CryptoName } from "@/types/crypto";
 import { PortfolioStatsRankingRow } from "./PortfolioStatsRankingRow";
 
 export function PortfolioStatsRanking() {

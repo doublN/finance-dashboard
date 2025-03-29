@@ -1,4 +1,4 @@
-import { CryptoName } from "@/app/types/crypto";
+import { CryptoName } from "@/types/crypto";
 import { PercentageChangeLabel } from "./PercentageChangeLabel";
 
 export type CryptoTableRow = {

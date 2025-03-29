@@ -1,4 +1,4 @@
-import { CryptoName } from "@/app/types/crypto";
+import { CryptoName } from "@/types/crypto";
 
 type Props = {
   readonly name: CryptoName;
