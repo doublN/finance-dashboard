@@ -15,7 +15,7 @@ export function FearAndGreedCard() {
           </div>
         </div>
         <FearAndGreedWidget percentage={56} />
-        <div className="flex justify-between text-sm">
+        <div className="flex justify-between">
           <span>
             Yesterday <FearAndGreedLabel value={21} />
           </span>

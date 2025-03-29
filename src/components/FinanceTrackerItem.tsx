@@ -8,7 +8,7 @@ type Props = {
 
 export function FinanceTrackerItem(props: Props) {
   return (
-    <p className="text-sm">
+    <p>
       <span>{props.label}:</span>
       <span className="text-blue-900 font-semibold"> {props.value} </span>
       {props.percentChange && (

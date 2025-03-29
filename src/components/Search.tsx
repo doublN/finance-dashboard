@@ -29,7 +29,7 @@ export function Search(props: Props) {
       <div className="relative flex items-center">
         <button
           aria-label="search button"
-          className="text-gray-700 align-middle absolute ml-2 "
+          className="text-gray-700 align-middle absolute ml-2"
         >
           <Icon name="search" size="small" />
         </button>
@@ -43,7 +43,7 @@ export function Search(props: Props) {
             setValue(event.target.value);
           }}
           autoComplete="off"
-          className="text-gray-700 p-1 py-2 pl-7 bg-white border-2 border-gray-200 rounded-md w-full text-sm focus:outline-none"
+          className="text-gray-700 p-1 py-2 pl-7 bg-white border-2 border-gray-200 rounded-md w-full focus:outline-none"
         ></input>
         {!value && props.canKeyboardFocus && (
           <div className="ml-[-65px] flex items-center gap-1">

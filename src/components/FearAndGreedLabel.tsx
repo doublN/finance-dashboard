@@ -24,7 +24,7 @@ export function FearAndGreedLabel(props: Props) {
   }
 
   return (
-    <span className={`p-2 rounded-full font-semibold ${bgColorStyle}`}>
+    <span className={`p-2 rounded-full ${bgColorStyle}`}>
       {label} - {props.value}
     </span>
   );

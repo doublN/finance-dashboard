@@ -11,13 +11,13 @@ export function PercentageChangeLabel(props: Props) {
 
   if (number >= 0) {
     return (
-      <span className="text-sm font-semibold text-green-800 bg-green-100 p-1 rounded-full border-1 border-green-200">
+      <span className="text-sm text-green-800 bg-green-100 p-1 rounded-full border-1 border-green-200">
         ▲ {number}%
       </span>
     );
   } else {
     return (
-      <span className="text-sm font-semibold text-red-800 bg-red-100 p-1 rounded-full border-1 border-red-200">
+      <span className="text-sm text-red-800 bg-red-100 p-1 rounded-full border-1 border-red-200">
         ▼ {number}%
       </span>
     );

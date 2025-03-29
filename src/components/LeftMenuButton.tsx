@@ -29,7 +29,7 @@ export function LeftMenuButton(props: Props) {
         aria-label={`${props.name} button`}
       >
         <Icon name={props.icon} size="small" />
-        <span className="pl-2 text-sm">{props.name}</span>
+        <span className="pl-2">{props.name}</span>
       </Link>
     </div>
   );
