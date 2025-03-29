@@ -11,6 +11,8 @@ import { Wallet } from "./svg/wallet";
 import { Search } from "./svg/search";
 import { Cancel } from "./svg/cancel";
 import { Filter } from "./svg/filter";
+import { Star } from "./svg/star";
+import { StarOutline } from "./svg/starOutline";
 
 export type IconName =
   | "help"
@@ -24,7 +26,9 @@ export type IconName =
   | "wallet"
   | "search"
   | "cancel"
-  | "filter";
+  | "filter"
+  | "star"
+  | "starOutline";
 
 export type IconSize = "small" | "medium" | "large";
 
@@ -46,6 +50,8 @@ const icons = new Map<IconName, FunctionComponent>([
   ["search", Search],
   ["cancel", Cancel],
   ["filter", Filter],
+  ["star", Star],
+  ["starOutline", StarOutline],
 ]);
 
 export function Icon(props: Props) {
