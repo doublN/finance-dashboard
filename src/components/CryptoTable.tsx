@@ -50,7 +50,11 @@ export function CryptoTable(props: Props) {
           </tr>
         </thead>
       </table>
-      <div className="overflow-y-scroll min-h-0">
+      <div
+        id="scrollbox"
+        className="overflow-y-scroll min-h-0 scrollbar-thin scrollbar-color scrollbar-thumb-gray-200 scrollbar-track-white"
+        style={{}}
+      >
         <table className="w-full table-auto border-separate border-spacing-y-8">
           <tbody className="w-full ">
             {props.data.map((rowData) => (
