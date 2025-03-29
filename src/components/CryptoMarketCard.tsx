@@ -1,31 +1,14 @@
 import { Icon } from "@/app/icons/Icon";
 import { Card } from "./Card";
 import { Search } from "./Search";
-import { CryptoTable, CryptoTableRow } from "./CryptoTable";
+import { CryptoTable } from "./CryptoTable";
+import { cryptoMarketTableData } from "@/data/cryptoMarketTableData";
 
 export function CryptoMarketCard() {
   const searchSubmit = async (data: FormData) => {
     "use server";
     console.log(data.get("search") as string);
   };
-
-  const data: Array<CryptoTableRow> = [
-    {
-      currency: {
-        name: "bitcoin",
-        label: "Bitcoin",
-        abbreviation: "BTC",
-      },
-      price: 96214.35,
-      oneHour: 1.23,
-      twentyFourHour: -1.98,
-      marketCap: 45719393811,
-      volume: {
-        dollarValue: 45719393811,
-        cryptoValue: 469168,
-      },
-    },
-  ];
 
   return (
     <Card>
@@ -45,7 +28,7 @@ export function CryptoMarketCard() {
           </button>
         </div>
       </div>
-      <CryptoTable data={data} />
+      <CryptoTable data={cryptoMarketTableData} />
     </Card>
   );
 }
