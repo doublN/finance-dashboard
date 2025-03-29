@@ -1,3 +1,4 @@
+import { CryptoMarketCard } from "@/components/CryptoMarketCard";
 import { FearAndGreedCard } from "@/components/FearAndGreedCard";
 import { FinanceTracker } from "@/components/FinanceTracker";
 import { PortfolioStatsCard } from "@/components/PortfolioStatsCard";
@@ -13,9 +14,7 @@ export default function Home() {
         <PortfolioStatsCard />
         <FearAndGreedCard />
       </div>
-      <div className="grow border-2 border-gray-200 rounded-xl bg-white">
-        Crypto Market
-      </div>
+      <CryptoMarketCard />
     </div>
   );
 }
