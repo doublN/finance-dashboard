@@ -29,7 +29,7 @@ export function PortfolioStatsRanking() {
     {
       name: "tether",
       label: "Tether",
-      percentage: 16.71,
+      percentage: 9.21,
       amount: 825.45,
     },
   ];
