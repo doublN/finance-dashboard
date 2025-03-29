@@ -10,6 +10,7 @@ import { Toll } from "./svg/toll";
 import { Wallet } from "./svg/wallet";
 import { Search } from "./svg/search";
 import { Cancel } from "./svg/cancel";
+import { Filter } from "./svg/filter";
 
 export type IconName =
   | "help"
@@ -22,7 +23,8 @@ export type IconName =
   | "toll"
   | "wallet"
   | "search"
-  | "cancel";
+  | "cancel"
+  | "filter";
 
 export type IconSize = "small" | "medium" | "large";
 
@@ -43,6 +45,7 @@ const icons = new Map<IconName, FunctionComponent>([
   ["wallet", Wallet],
   ["search", Search],
   ["cancel", Cancel],
+  ["filter", Filter],
 ]);
 
 export function Icon(props: Props) {
