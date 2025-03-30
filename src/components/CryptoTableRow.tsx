@@ -1,6 +1,7 @@
 import { Icon } from "@/app/icons/Icon";
 import { CryptoName } from "@/types/crypto";
 import { PercentageChangeLabel } from "./PercentageChangeLabel";
+import { numberFormat } from "@/utils/numberFormat";
 
 export type CryptoTableRowType = {
   favourite: boolean;
@@ -61,18 +62,23 @@ export function CryptoTableRow(props: Props) {
           </div>
         </div>
       </td>
-      <td className={props.widthStyle}>${props.data.price}</td>
+      <td className={props.widthStyle}>
+        ${numberFormat.format(props.data.price)}
+      </td>
       <td className={props.widthStyle}>
         <PercentageChangeLabel value={props.data.oneHour.toString()} />
       </td>
       <td className={props.widthStyle}>
         <PercentageChangeLabel value={props.data.twentyFourHour.toString()} />
       </td>
-      <td className={props.widthStyle}>${props.data.marketCap}</td>
       <td className={props.widthStyle}>
-        <p>${props.data.volume.dollarValue}</p>
+        ${numberFormat.format(props.data.marketCap)}
+      </td>
+      <td className={props.widthStyle}>
+        <p>${numberFormat.format(props.data.volume.dollarValue)}</p>
         <p className="text-sm text-gray-500">
-          {props.data.volume.cryptoValue} {props.data.currency.abbreviation}
+          {numberFormat.format(props.data.volume.cryptoValue)}{" "}
+          {props.data.currency.abbreviation}
         </p>
       </td>
     </tr>

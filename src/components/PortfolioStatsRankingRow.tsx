@@ -1,4 +1,5 @@
 import { CryptoName } from "@/types/crypto";
+import { numberFormat } from "@/utils/numberFormat";
 
 type Props = {
   readonly name: CryptoName;
@@ -56,7 +57,7 @@ export function PortfolioStatsRankingRow(props: Props) {
           {props.percentage}%
         </span>
       </div>
-      <p className="font-semibold">${props.amount}</p>
+      <p className="font-semibold">${numberFormat.format(props.amount)}</p>
     </div>
   );
 }
