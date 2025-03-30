@@ -10,7 +10,7 @@ export function CryptoTable(props: Props) {
   const headerStyle = `py-2 text-left text-gray-500 border-t-2 border-b-2 border-gray-200`;
 
   return (
-    <div className="flex flex-col min-h-0">
+    <div className="flex flex-col min-h-0 mb-[-24px]">
       <table className="w-full table-auto">
         <thead>
           <tr className=" text-gray-500 border-gray-200">
