@@ -1,8 +1,11 @@
 "use client";
+import { Dispatch, SetStateAction } from "react";
 import { CryptoTableRow, CryptoTableRowType } from "./CryptoTableRow";
 
 type Props = {
   readonly data: Array<CryptoTableRowType>;
+  readonly isGradientVisible: boolean;
+  readonly setIsGradientVisible: Dispatch<SetStateAction<boolean>>;
 };
 
 export function CryptoTable(props: Props) {
@@ -28,18 +31,13 @@ export function CryptoTable(props: Props) {
         id="scrollbox"
         className="overflow-y-scroll min-h-0 scrollbar-thin scrollbar-color scrollbar-thumb-gray-200 scrollbar-track-white"
         onScroll={() => {
-          // console.log("hi");
+          if (props.isGradientVisible) {
+            props.setIsGradientVisible(false);
+          }
         }}
       >
         <table className="w-full table-auto border-separate border-spacing-y-8">
           <tbody className="w-full ">
-            {props.data.map((rowData) => (
-              <CryptoTableRow
-                key={rowData.currency.label}
-                data={rowData}
-                widthStyle={width}
-              />
-            ))}
             {props.data.map((rowData) => (
               <CryptoTableRow
                 key={rowData.currency.label}

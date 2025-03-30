@@ -1,12 +1,16 @@
+"use client";
+
 import { Icon } from "@/app/icons/Icon";
 import { Card } from "./Card";
 import { Search } from "./Search";
 import { CryptoTable } from "./CryptoTable";
 import { cryptoMarketTableData } from "@/data/cryptoMarketTableData";
+import { useState } from "react";
 
 export function CryptoMarketCard() {
+  const [isGradientVisible, setIsGradientVisible] = useState(true);
+
   const searchSubmit = async (data: FormData) => {
-    "use server";
     console.log(data.get("search") as string);
   };
 
@@ -28,12 +32,18 @@ export function CryptoMarketCard() {
           </button>
         </div>
       </div>
-      <CryptoTable data={cryptoMarketTableData} />
-      <div className="flex justify-center items-center absolute bottom-0 left-0 w-full bg-linear-to-t from-gray-50 to-transparent rounded-bl-lg rounded-br-lg h-30">
-        <div className="border-2 rounded-lg border-gray-300 bg-white py-1 px-2">
-          See more x crypto
+      <CryptoTable
+        data={cryptoMarketTableData}
+        setIsGradientVisible={setIsGradientVisible}
+        isGradientVisible={isGradientVisible}
+      />
+      {isGradientVisible && (
+        <div className="flex justify-center items-center absolute bottom-0 left-0 w-full bg-linear-to-t from-gray-50 to-transparent rounded-bl-lg rounded-br-lg h-30">
+          <div className="border-2 rounded-lg border-gray-300 bg-white py-1 px-2">
+            See more {cryptoMarketTableData.length} crypto
+          </div>
         </div>
-      </div>
+      )}
     </Card>
   );
 }
