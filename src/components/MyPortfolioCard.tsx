@@ -2,6 +2,7 @@
 import { numberFormat } from "@/utils/numberFormat";
 import { PercentageChangeLabel } from "./PercentageChangeLabel";
 import { StatisticsTable } from "./StatisticsTable";
+import { CurrencyDropdown } from "./CurrencyDropdown";
 
 export function MyPortFolioCard() {
   return (
@@ -19,7 +20,7 @@ export function MyPortFolioCard() {
             <PercentageChangeLabel value="5.95" />
           </div>
         </div>
-        <div>DROPDOWN</div>
+        <CurrencyDropdown />
       </div>
       <hr className="text-gray-100 border-1 my-6" />
       <StatisticsTable />
