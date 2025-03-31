@@ -13,6 +13,7 @@ import { Cancel } from "./svg/cancel";
 import { Filter } from "./svg/filter";
 import { Star } from "./svg/star";
 import { StarOutline } from "./svg/starOutline";
+import { Node } from "./svg/node";
 
 export type IconName =
   | "help"
@@ -28,7 +29,8 @@ export type IconName =
   | "cancel"
   | "filter"
   | "star"
-  | "starOutline";
+  | "starOutline"
+  | "node";
 
 export type IconSize = "small" | "medium" | "large";
 
@@ -52,6 +54,7 @@ const icons = new Map<IconName, FunctionComponent>([
   ["filter", Filter],
   ["star", Star],
   ["starOutline", StarOutline],
+  ["node", Node],
 ]);
 
 export function Icon(props: Props) {
