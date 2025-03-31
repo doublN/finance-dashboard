@@ -14,6 +14,7 @@ import { Filter } from "./svg/filter";
 import { Star } from "./svg/star";
 import { StarOutline } from "./svg/starOutline";
 import { Node } from "./svg/node";
+import { Chevron } from "./svg/chevron";
 
 export type IconName =
   | "help"
@@ -30,7 +31,8 @@ export type IconName =
   | "filter"
   | "star"
   | "starOutline"
-  | "node";
+  | "node"
+  | "chevron";
 
 export type IconSize = "small" | "medium" | "large";
 
@@ -55,6 +57,7 @@ const icons = new Map<IconName, FunctionComponent>([
   ["star", Star],
   ["starOutline", StarOutline],
   ["node", Node],
+  ["chevron", Chevron],
 ]);
 
 export function Icon(props: Props) {
