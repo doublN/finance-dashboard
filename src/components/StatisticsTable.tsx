@@ -122,7 +122,7 @@ export function StatisticsTable() {
 
     const position = context.chart.canvas.getBoundingClientRect();
 
-    // Display, position, and set styles for font
+    // Display, position tooltip
     tooltipEl.style.opacity = "1";
     tooltipEl.style.position = "absolute";
     tooltipEl.style.left = position.left + tooltipModel.caretX - 5 + "px";
@@ -134,7 +134,7 @@ export function StatisticsTable() {
   return (
     <div>
       <div className="flex items-center justify-between">
-        <h4>Statistics</h4>
+        <h4 className="font-semibold text-lg">Statistics</h4>
         <StatisticsTableRangeWidget />
       </div>
       <Line
