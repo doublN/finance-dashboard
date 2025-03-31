@@ -133,95 +133,102 @@ export function StatisticsTable() {
 
   return (
     <div>
-      <div className="flex items-center justify-between">
+      <div className="flex items-center mb-6 justify-between">
         <h4 className="font-semibold text-lg">Statistics</h4>
         <StatisticsTableRangeWidget />
       </div>
-      <Line
-        data={{
-          datasets: [
-            {
-              label: "",
-              data,
-              borderColor: "green",
-              backgroundColor: (context) => {
-                if (!context.chart.chartArea) {
-                  return;
-                }
-                const {
-                  ctx,
-                  chartArea: { top, bottom },
-                } = context.chart;
+      <div className="max-h-[40vh]">
+        <Line
+          data={{
+            datasets: [
+              {
+                label: "",
+                data,
+                borderColor: "green",
+                backgroundColor: (context) => {
+                  if (!context.chart.chartArea) {
+                    return;
+                  }
+                  const {
+                    ctx,
+                    chartArea: { top, bottom },
+                  } = context.chart;
 
-                const gradientBg = ctx.createLinearGradient(0, top, 0, bottom);
-                gradientBg.addColorStop(0, "rgba(0, 255, 0, 0.3)");
-                gradientBg.addColorStop(1, "transparent");
-                return gradientBg;
+                  const gradientBg = ctx.createLinearGradient(
+                    0,
+                    top,
+                    0,
+                    bottom
+                  );
+                  gradientBg.addColorStop(0, "rgba(0, 255, 0, 0.3)");
+                  gradientBg.addColorStop(1, "transparent");
+                  return gradientBg;
+                },
+                fill: true,
               },
-              fill: true,
-            },
-          ],
-        }}
-        options={{
-          plugins: {
-            legend: {
-              display: false,
-            },
-            tooltip: {
-              enabled: false,
-              position: "nearest",
-              external: externalTooltipHandler,
-            },
-          },
-          elements: {
-            point: {
-              pointStyle: false,
-            },
-          },
-          interaction: {
-            mode: "nearest",
-          },
-          scales: {
-            y: {
-              beginAtZero: true,
-              type: "linear",
-              max: 10000,
-              border: {
+            ],
+          }}
+          options={{
+            plugins: {
+              legend: {
                 display: false,
-                dash: [6, 6],
               },
-              ticks: {
-                callback: (value) => {
-                  return "$" + numberFormat.format(value as number);
-                },
-                stepSize: 2000,
-              },
-              grid: {
-                drawTicks: false,
+              tooltip: {
+                enabled: false,
+                position: "nearest",
+                external: externalTooltipHandler,
               },
             },
-            x: {
-              type: "time",
-              min: "2025-03-30",
-              time: {
-                unit: "month",
-                displayFormats: {
-                  month: "MMM yy",
-                },
-                tooltipFormat: "MMM dd, yyyy",
-              },
-              adapters: {
-                date: {
-                  locale: enGB,
-                },
-              },
-              grid: {
-                drawOnChartArea: false,
+            elements: {
+              point: {
+                pointStyle: false,
               },
             },
-          },
-        }}
-      />
+            interaction: {
+              mode: "nearest",
+            },
+            scales: {
+              y: {
+                beginAtZero: true,
+                type: "linear",
+                max: 10000,
+                border: {
+                  display: false,
+                  dash: [6, 6],
+                },
+                ticks: {
+                  callback: (value) => {
+                    return "$" + numberFormat.format(value as number);
+                  },
+                  stepSize: 2000,
+                },
+                grid: {
+                  drawTicks: false,
+                },
+              },
+              x: {
+                type: "time",
+                min: "2025-03-30",
+                time: {
+                  unit: "month",
+                  displayFormats: {
+                    month: "MMM yy",
+                  },
+                  tooltipFormat: "MMM dd, yyyy",
+                },
+                adapters: {
+                  date: {
+                    locale: enGB,
+                  },
+                },
+                grid: {
+                  drawOnChartArea: false,
+                },
+              },
+            },
+          }}
+        />
+      </div>
     </div>
   );
 }
